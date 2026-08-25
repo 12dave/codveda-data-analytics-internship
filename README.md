@@ -18,20 +18,36 @@ along with the Python script, dataset, and output charts/images.
 
 ## Summary of Key Results
 
-| Level | Task | Highlight |
-|---|---|---|
-| 1 | Data Cleaning | Removed 22 hidden duplicates and standardized inconsistent text formatting in a 732-row social media dataset |
-| 1 | EDA | Found strong correlation (0.87) between sepal length and petal length across Iris species |
-| 2 | Regression | Predicted house prices from room count (R² = 0.37), showing room count alone is a moderate predictor |
-| 2 | Clustering | K-Means correctly separated all 50 setosa flowers with zero error; versicolor/virginica showed natural overlap |
-| 3 | Classification | Random Forest achieved 95.7% accuracy and 73.7% recall predicting customer churn, vs. 85.3%/17.9% for Logistic Regression |
-| 3 | Dashboard | Built an interactive Power BI dashboard visualizing churn rate, churn by plan type, and customer service call patterns |
-| 3 | NLP Sentiment | Applied TextBlob sentiment scoring with NLTK preprocessing (tokenization, stopword removal, lemmatization) |
+# Level 1 – Basic
 
+## Task 1: Data Cleaning and Preprocessing
+**Dataset:** Sentiment Dataset (732 social media posts)
 
-pip install pandas matplotlib seaborn scikit-learn nltk textblob wordcloud
-cd Level1_Basic/task1_data_cleaning
-python3 level1_task1_simple.py
+Cleaned a raw, messy dataset by:
+- Removing 2 junk index columns
+- Stripping inconsistent whitespace from text fields
+- Standardizing text casing (e.g. "positive" -> "Positive")
+- Removing 22 duplicate rows that were hidden by whitespace differences
+
+**Files:** level1_task1_cleeaning.py, sentiment_cleaned.csv
+
+**Result:** 732 rows -> 710 clean, deduplicated rows.
+
+---
+
+## Task 2: Exploratory Data Analysis (EDA)
+**Dataset:** Iris (150 flowers, 4 measurements + species)
+
+Calculated summary statistics and visualized feature distributions and relationships across the three Iris species.
+
+**Files:** level1_task2_simple.py, histogram_petal_length.png, boxplot_petal_length.png, scatter_sepal_vs_petal.png
+
+**Result:** Found a strong correlation (0.87) between sepal length and petal length; species cluster clearly by petal size.
+
+## How to Run
+pip install pandas matplotlib seaborn
+python3 level1_task1_cleeaning.py
+python3 level1_task2_simple.py
 ```
 
 ## Author
